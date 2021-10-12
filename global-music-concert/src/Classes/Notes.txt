@@ -1,0 +1,79 @@
+USEFUL WEBSITES
+https://stackoverflow.com/questions/2839321/connect-java-to-a-mysql-database
+https://coderwall.com/p/609ppa/printing-the-result-of-resultset
+https://thebadprogrammer.com/swing-uimanager-keys/
+https://programming.guide/java/create-a-custom-event.html
+
+
+
+USEFUL CODE
+
+mainFrame.getContentPane().setFont(new Font("Georgia", Font.PLAIN, 13));
+mainFrame.getContentPane().setForeground(SystemColor.desktop);
+mainFrame.getContentPane().setBackground(SystemColor.inactiveCaptionBorder);
+mainFrame.setForeground(Color.CYAN);
+mainFrame.setBackground(Color.LIGHT_GRAY);
+
+
+gbl.columnWidths = new int[]{88, 8, 7, 8, 15, 42, 4, 49, 48, 233, 0};
+gbl.rowHeights = new int[]{34, 28, 37, 21, 21, 22, 19, 22, 21, 21, 19, 26, 14, 13, 21, 26, 44, 0};
+gbl.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+gbl.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+
+
+// Gender
+JLabel genderLbl = new JLabel("Gender");
+genderLbl.setFont(defaultFont);
+//GridBagConstraints genderLblGbc = new GridBagConstraints();
+gbc.fill = GridBagConstraints.BOTH;
+gbc.insets = new Insets(pTop,pLeft,pBot,pRight);
+gbc.gridwidth = 2;
+gbc.gridx = 0;
+gbc.gridy = 17;
+add(genderLbl, gbc);
+
+JRadioButton femaleRdbtn = new JRadioButton("Female");
+femaleRdbtn.setActionCommand("Female");
+femaleRdbtn.setBackground(SystemColor.inactiveCaptionBorder);
+femaleRdbtn.setFont(new Font("Arial", Font.PLAIN, 10));
+//GridBagConstraints femaleRdbtnGbc = new GridBagConstraints();
+//gbc.anchor = GridBagConstraints.SOUTH;
+gbc.fill = GridBagConstraints.HORIZONTAL;
+gbc.insets = new Insets(pTop,pLeft,pBot,pRight);
+gbc.gridwidth = 3;
+gbc.gridx = 3;
+gbc.gridy = 17;
+add(femaleRdbtn, gbc);
+
+JRadioButton maleRdbtn = new JRadioButton("Male");
+maleRdbtn.setActionCommand("Male");
+maleRdbtn.setBackground(SystemColor.inactiveCaptionBorder);
+maleRdbtn.setFont(new Font("Arial", Font.PLAIN, 11));
+//GridBagConstraints maleRdbtnGbc = new GridBagConstraints();
+gbc.fill = GridBagConstraints.BOTH;
+gbc.insets = new Insets(pTop,pLeft,pBot,pRight);
+gbc.gridwidth = 2;
+gbc.gridx = 6;
+gbc.gridy = 17;
+add(maleRdbtn, gbc);
+
+JRadioButton otherRdbtn = new JRadioButton("Other");
+otherRdbtn.setActionCommand("other");
+otherRdbtn.setBackground(SystemColor.inactiveCaptionBorder);
+otherRdbtn.setFont(new Font("Arial", Font.PLAIN, 11));
+//GridBagConstraints otherRdbtnGbc = new GridBagConstraints();
+gbc.fill = GridBagConstraints.BOTH;
+gbc.insets = new Insets(pTop,pLeft,pBot,pRight);
+gbc.gridwidth = 1;
+gbc.gridx = 8;
+gbc.gridy = 17;
+add(otherRdbtn, gbc);
+
+ButtonGroup genderBtnGrp = new ButtonGroup();
+genderBtnGrp.add(maleRdbtn);
+genderBtnGrp.add(femaleRdbtn);
+genderBtnGrp.add(otherRdbtn);
+
+genderBtnGrp.getSelection().getActionCommand()
+
+		

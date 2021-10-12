@@ -1,0 +1,75 @@
+
+CREATE TABLE users (
+Username		VARCHAR(60) PRIMARY KEY,
+Title			VARCHAR(10) NOT NULL,
+First_name		VARCHAR(60) NOT NULL,
+Last_name		VARCHAR(60) NOT NULL,
+DOB			DATE NOT NULL,
+Address_1		VARCHAR(60) NOT NULL,
+Address_2		VARCHAR(60),
+Town			VARCHAR(60) NOT NULL,
+Postcode		VARCHAR(60) NOT NULL,
+Organisation_name	VARCHAR(60),
+Password		VARCHAR(60) NOT NULL,
+Phone_no		INT NOT NULL,
+Email_address		VARCHAR(60) NOT NULL,
+Web_address		VARCHAR(60),
+Level			VARCHAR(60) NOT NULL
+);
+
+
+CREATE TABLE organiser_info (
+Organiser_username	VARCHAR(60) NOT NULL,
+Concert_id		INT NOT NULL,
+PRIMARY KEY(Organiser_username, Concert_id)
+);
+
+
+CREATE TABLE concert_info (
+Concert_id			INT AUTO_INCREMENT PRIMARY KEY,
+Name				VARCHAR(60) NOT NULL,
+Location			VARCHAR(60) NOT NULL,
+Artists_name			TEXT NOT NULL,
+Start				DATETIME NOT NULL,
+End				DATETIME NOT NULL,
+Ticket_price_a			FLOAT(8,2) NOT NULL,
+Num_of_tickets_a		INT NOT NULL,
+Ticket_price_b			FLOAT(8,2),
+Num_of_tickets_b		INT,
+Ticket_price_c			FLOAT(8,2),
+Num_of_tickets_c		INT,
+Num_of_tickets_organisation	INT
+);
+
+
+CREATE TABLE invoice_info (
+Invoice_id			INT AUTO_INCREMENT PRIMARY KEY,
+Concert_id			INT NOT NULL,
+Num_of_tickets_a		INT NOT NULL,
+Ticket_cost_a			FLOAT(8,2) NOT NULL,
+Num_of_tickets_b		INT NOT NULL,
+Ticket_cost_b			FLOAT(8,2) NOT NULL,
+Num_of_tickets_c		INT NOT NULL,
+Ticket_cost_c			FLOAT(8,2) NOT NULL,
+Num_of_tickets_organisation	INT NOT NULL,
+Organiser_username		VARCHAR(60) NOT NULL
+/*FOREIGN KEY (Organiser_username) REFERENCES organiser_info(Organiser_username)*/
+);
+
+
+CREATE TABLE user_booking_info (
+Booking_id	INT NOT NULL AUTO_INCREMENT,
+Username	VARCHAR(60) NOT NULL,
+Invoice_id	INT NOT NULL,
+PRIMARY KEY (Booking_id, Username, Invoice_id)
+);
+
+
+CREATE TABLE payment_info (
+Username	VARCHAR(60) NOT NULL,
+Account_no	INT NOT NULL,
+Payment_method	VARCHAR(40) NOT NULL,
+Organisation	BOOLEAN NOT NULL,
+PRIMARY KEY (Username, Account_no)
+);
+

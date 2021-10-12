@@ -1,0 +1,326 @@
+package Classes.TestGUI;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JToggleButton;
+import java.awt.BorderLayout;
+import javax.swing.JScrollPane;
+import javax.swing.JToolBar;
+import javax.swing.JScrollBar;
+import javax.swing.JSpinner;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import javax.swing.JCheckBox;
+import java.awt.Color;
+import javax.swing.JTextArea;
+import java.awt.Button;
+import javax.swing.JTree;
+import java.awt.Scrollbar;
+import java.awt.Choice;
+import java.awt.Checkbox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.ScrollPane;
+import java.awt.Panel;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+
+public class bankdetails {
+
+	private JFrame frmConcert;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					bankdetails window = new bankdetails();
+					window.frmConcert.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public bankdetails() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmConcert = new JFrame();
+		frmConcert.setTitle("Concert");
+		frmConcert.getContentPane().setBackground(SystemColor.inactiveCaptionBorder);
+		frmConcert.getContentPane().setForeground(SystemColor.inactiveCaption);
+		frmConcert.setBounds(100, 100, 453, 579);
+		frmConcert.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GridBagLayout gridBagLayout = new GridBagLayout();
+		gridBagLayout.columnWidths = new int[]{109, 4, 54, 229, 21, 0};
+		gridBagLayout.rowHeights = new int[]{24, 28, 21, 22, 21, 19, 19, 15, 13, 28, 52, 98, 89, 0};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		frmConcert.getContentPane().setLayout(gridBagLayout);
+		
+		JMenu mnNewMenu = new JMenu("Menu");
+		GridBagConstraints gbc_mnNewMenu = new GridBagConstraints();
+		gbc_mnNewMenu.anchor = GridBagConstraints.NORTH;
+		gbc_mnNewMenu.fill = GridBagConstraints.HORIZONTAL;
+		gbc_mnNewMenu.insets = new Insets(0, 0, 5, 5);
+		gbc_mnNewMenu.gridwidth = 2;
+		gbc_mnNewMenu.gridx = 0;
+		gbc_mnNewMenu.gridy = 0;
+		frmConcert.getContentPane().add(mnNewMenu, gbc_mnNewMenu);
+		
+		Button button_1 = new Button(" Home\r\n");
+		button_1.setBackground(SystemColor.inactiveCaptionBorder);
+		button_1.setForeground(SystemColor.desktop);
+		GridBagConstraints gbc_button_1 = new GridBagConstraints();
+		gbc_button_1.anchor = GridBagConstraints.NORTHWEST;
+		gbc_button_1.insets = new Insets(0, 0, 5, 5);
+		gbc_button_1.gridwidth = 2;
+		gbc_button_1.gridx = 2;
+		gbc_button_1.gridy = 0;
+		frmConcert.getContentPane().add(button_1, gbc_button_1);
+		
+		Scrollbar scrollbar = new Scrollbar();
+		scrollbar.setForeground(SystemColor.info);
+		GridBagConstraints gbc_scrollbar = new GridBagConstraints();
+		gbc_scrollbar.anchor = GridBagConstraints.WEST;
+		gbc_scrollbar.fill = GridBagConstraints.VERTICAL;
+		gbc_scrollbar.gridheight = 13;
+		gbc_scrollbar.gridx = 4;
+		gbc_scrollbar.gridy = 0;
+		frmConcert.getContentPane().add(scrollbar, gbc_scrollbar);
+		
+		JLabel lblSetUpPayment = new JLabel("Set up payment account");
+		lblSetUpPayment.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblSetUpPayment = new GridBagConstraints();
+		gbc_lblSetUpPayment.fill = GridBagConstraints.VERTICAL;
+		gbc_lblSetUpPayment.insets = new Insets(0, 0, 5, 5);
+		gbc_lblSetUpPayment.gridwidth = 3;
+		gbc_lblSetUpPayment.gridx = 0;
+		gbc_lblSetUpPayment.gridy = 1;
+		frmConcert.getContentPane().add(lblSetUpPayment, gbc_lblSetUpPayment);
+		
+		JLabel lblNewLabel = new JLabel("Bank name\r\n");
+		lblNewLabel.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.fill = GridBagConstraints.BOTH;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridwidth = 3;
+		gbc_lblNewLabel.gridx = 0;
+		gbc_lblNewLabel.gridy = 2;
+		frmConcert.getContentPane().add(lblNewLabel, gbc_lblNewLabel);
+		
+		textField_3 = new JTextField();
+		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
+		gbc_textField_3.anchor = GridBagConstraints.SOUTHWEST;
+		gbc_textField_3.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_3.gridwidth = 2;
+		gbc_textField_3.gridx = 2;
+		gbc_textField_3.gridy = 2;
+		frmConcert.getContentPane().add(textField_3, gbc_textField_3);
+		textField_3.setColumns(10);
+		
+		JTextArea txtrNameOnThecard = new JTextArea();
+		txtrNameOnThecard.setFont(new Font("Georgia", Font.PLAIN, 13));
+		txtrNameOnThecard.setText("Holders Name");
+		GridBagConstraints gbc_txtrNameOnThecard = new GridBagConstraints();
+		gbc_txtrNameOnThecard.fill = GridBagConstraints.BOTH;
+		gbc_txtrNameOnThecard.insets = new Insets(0, 0, 5, 5);
+		gbc_txtrNameOnThecard.gridx = 0;
+		gbc_txtrNameOnThecard.gridy = 3;
+		frmConcert.getContentPane().add(txtrNameOnThecard, gbc_txtrNameOnThecard);
+		
+		JFormattedTextField formattedTextField = new JFormattedTextField();
+		GridBagConstraints gbc_formattedTextField = new GridBagConstraints();
+		gbc_formattedTextField.anchor = GridBagConstraints.NORTHWEST;
+		gbc_formattedTextField.insets = new Insets(0, 0, 5, 5);
+		gbc_formattedTextField.gridwidth = 2;
+		gbc_formattedTextField.gridx = 2;
+		gbc_formattedTextField.gridy = 3;
+		frmConcert.getContentPane().add(formattedTextField, gbc_formattedTextField);
+		
+		JLabel lblCardNumber = new JLabel("Card Number");
+		lblCardNumber.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblCardNumber = new GridBagConstraints();
+		gbc_lblCardNumber.fill = GridBagConstraints.BOTH;
+		gbc_lblCardNumber.insets = new Insets(0, 0, 5, 5);
+		gbc_lblCardNumber.gridx = 0;
+		gbc_lblCardNumber.gridy = 4;
+		frmConcert.getContentPane().add(lblCardNumber, gbc_lblCardNumber);
+		
+		textField = new JTextField();
+		GridBagConstraints gbc_textField = new GridBagConstraints();
+		gbc_textField.anchor = GridBagConstraints.SOUTHWEST;
+		gbc_textField.insets = new Insets(0, 0, 5, 5);
+		gbc_textField.gridwidth = 2;
+		gbc_textField.gridx = 2;
+		gbc_textField.gridy = 4;
+		frmConcert.getContentPane().add(textField, gbc_textField);
+		textField.setColumns(10);
+		
+		JLabel lblAccountNumber = new JLabel("Account number");
+		lblAccountNumber.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblAccountNumber = new GridBagConstraints();
+		gbc_lblAccountNumber.insets = new Insets(0, 0, 5, 5);
+		gbc_lblAccountNumber.gridwidth = 3;
+		gbc_lblAccountNumber.gridx = 0;
+		gbc_lblAccountNumber.gridy = 5;
+		frmConcert.getContentPane().add(lblAccountNumber, gbc_lblAccountNumber);
+		
+		textField_1 = new JTextField();
+		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
+		gbc_textField_1.anchor = GridBagConstraints.NORTHWEST;
+		gbc_textField_1.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_1.gridwidth = 2;
+		gbc_textField_1.gridx = 2;
+		gbc_textField_1.gridy = 5;
+		frmConcert.getContentPane().add(textField_1, gbc_textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblSortCode = new JLabel("Sort Code");
+		lblSortCode.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblSortCode = new GridBagConstraints();
+		gbc_lblSortCode.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblSortCode.insets = new Insets(0, 0, 5, 5);
+		gbc_lblSortCode.gridx = 0;
+		gbc_lblSortCode.gridy = 6;
+		frmConcert.getContentPane().add(lblSortCode, gbc_lblSortCode);
+		
+		textField_2 = new JTextField();
+		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
+		gbc_textField_2.anchor = GridBagConstraints.NORTHWEST;
+		gbc_textField_2.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_2.gridwidth = 2;
+		gbc_textField_2.gridx = 2;
+		gbc_textField_2.gridy = 6;
+		frmConcert.getContentPane().add(textField_2, gbc_textField_2);
+		textField_2.setColumns(10);
+		
+		JLabel lblExpireDate = new JLabel("Expire date");
+		lblExpireDate.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblExpireDate = new GridBagConstraints();
+		gbc_lblExpireDate.anchor = GridBagConstraints.NORTH;
+		gbc_lblExpireDate.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblExpireDate.insets = new Insets(0, 0, 5, 5);
+		gbc_lblExpireDate.gridx = 0;
+		gbc_lblExpireDate.gridy = 7;
+		frmConcert.getContentPane().add(lblExpireDate, gbc_lblExpireDate);
+		
+		JSpinner spinner = new JSpinner();
+		GridBagConstraints gbc_spinner = new GridBagConstraints();
+		gbc_spinner.anchor = GridBagConstraints.NORTH;
+		gbc_spinner.fill = GridBagConstraints.HORIZONTAL;
+		gbc_spinner.insets = new Insets(0, 0, 5, 5);
+		gbc_spinner.gridheight = 2;
+		gbc_spinner.gridx = 2;
+		gbc_spinner.gridy = 7;
+		frmConcert.getContentPane().add(spinner, gbc_spinner);
+		
+		JSpinner spinner_1 = new JSpinner();
+		GridBagConstraints gbc_spinner_1 = new GridBagConstraints();
+		gbc_spinner_1.anchor = GridBagConstraints.NORTHWEST;
+		gbc_spinner_1.insets = new Insets(0, 0, 5, 5);
+		gbc_spinner_1.gridheight = 2;
+		gbc_spinner_1.gridx = 3;
+		gbc_spinner_1.gridy = 7;
+		frmConcert.getContentPane().add(spinner_1, gbc_spinner_1);
+		
+		JLabel lblMonth = new JLabel("month");
+		lblMonth.setFont(new Font("Arial", Font.PLAIN, 10));
+		GridBagConstraints gbc_lblMonth = new GridBagConstraints();
+		gbc_lblMonth.anchor = GridBagConstraints.NORTH;
+		gbc_lblMonth.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblMonth.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMonth.gridx = 2;
+		gbc_lblMonth.gridy = 8;
+		frmConcert.getContentPane().add(lblMonth, gbc_lblMonth);
+		
+		JLabel lblYear = new JLabel("year");
+		lblYear.setFont(new Font("Arial", Font.PLAIN, 10));
+		GridBagConstraints gbc_lblYear = new GridBagConstraints();
+		gbc_lblYear.anchor = GridBagConstraints.NORTHWEST;
+		gbc_lblYear.insets = new Insets(0, 0, 5, 5);
+		gbc_lblYear.gridx = 3;
+		gbc_lblYear.gridy = 8;
+		frmConcert.getContentPane().add(lblYear, gbc_lblYear);
+		
+		JLabel lblIfYouWould = new JLabel("If you would like to join our membership account ,please tick the box bellow.");
+		lblIfYouWould.setFont(new Font("Georgia", Font.PLAIN, 12));
+		GridBagConstraints gbc_lblIfYouWould = new GridBagConstraints();
+		gbc_lblIfYouWould.fill = GridBagConstraints.BOTH;
+		gbc_lblIfYouWould.insets = new Insets(0, 0, 5, 5);
+		gbc_lblIfYouWould.gridwidth = 4;
+		gbc_lblIfYouWould.gridx = 0;
+		gbc_lblIfYouWould.gridy = 9;
+		frmConcert.getContentPane().add(lblIfYouWould, gbc_lblIfYouWould);
+		
+		JLabel lblSetUpDirec = new JLabel("Set up  direc debit");
+		lblSetUpDirec.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblSetUpDirec = new GridBagConstraints();
+		gbc_lblSetUpDirec.anchor = GridBagConstraints.SOUTHEAST;
+		gbc_lblSetUpDirec.insets = new Insets(0, 0, 5, 5);
+		gbc_lblSetUpDirec.gridwidth = 2;
+		gbc_lblSetUpDirec.gridx = 0;
+		gbc_lblSetUpDirec.gridy = 10;
+		frmConcert.getContentPane().add(lblSetUpDirec, gbc_lblSetUpDirec);
+		
+		JLabel lblMembership = new JLabel("Membership");
+		lblMembership.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_lblMembership = new GridBagConstraints();
+		gbc_lblMembership.anchor = GridBagConstraints.NORTH;
+		gbc_lblMembership.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMembership.gridwidth = 3;
+		gbc_lblMembership.gridx = 0;
+		gbc_lblMembership.gridy = 10;
+		frmConcert.getContentPane().add(lblMembership, gbc_lblMembership);
+		
+		Checkbox checkbox = new Checkbox("Agree");
+		checkbox.setForeground(SystemColor.windowBorder);
+		checkbox.setBackground(SystemColor.inactiveCaptionBorder);
+		checkbox.setFont(new Font("Georgia", Font.PLAIN, 13));
+		GridBagConstraints gbc_checkbox = new GridBagConstraints();
+		gbc_checkbox.anchor = GridBagConstraints.NORTHWEST;
+		gbc_checkbox.insets = new Insets(0, 0, 5, 5);
+		gbc_checkbox.gridwidth = 2;
+		gbc_checkbox.gridx = 2;
+		gbc_checkbox.gridy = 10;
+		frmConcert.getContentPane().add(checkbox, gbc_checkbox);
+		
+		Button button = new Button("Save and continue");
+		button.setBackground(SystemColor.inactiveCaptionBorder);
+		button.setFont(new Font("Georgia", Font.PLAIN, 13));
+		button.setForeground(SystemColor.activeCaptionText);
+		GridBagConstraints gbc_button = new GridBagConstraints();
+		gbc_button.anchor = GridBagConstraints.NORTH;
+		gbc_button.fill = GridBagConstraints.HORIZONTAL;
+		gbc_button.insets = new Insets(0, 0, 0, 5);
+		gbc_button.gridwidth = 3;
+		gbc_button.gridx = 1;
+		gbc_button.gridy = 12;
+		frmConcert.getContentPane().add(button, gbc_button);
+	}
+}
